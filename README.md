@@ -1,0 +1,1 @@
+This Application calculate the total price of product
