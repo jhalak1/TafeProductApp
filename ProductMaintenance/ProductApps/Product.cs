@@ -15,6 +15,10 @@ namespace ProductApps
         private decimal wrapping;
         private decimal gst;
 
+
+     
+        const decimal deliveryCharge = 25m;
+
         private decimal Price
         {
             get { return price; }
@@ -64,6 +68,7 @@ namespace ProductApps
         public void calTotalPayment()
         {
             TotalPayment = Price * Quantity;
+            
         }
     }
 }
