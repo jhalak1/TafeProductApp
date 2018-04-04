@@ -23,6 +23,7 @@ namespace ProductApps
         Product cProduct;
         const decimal deliveryCharge = 25m;
         const decimal wrapCharge = 5m;
+        const decimal gst = 1.1m;
 
         public MainWindow()
         {
@@ -42,6 +43,10 @@ namespace ProductApps
 
                 decimal afterWrap = cProduct.TotalPayment + deliveryCharge + wrapCharge;
                 wrapTextBox.Text = afterWrap.ToString("C");
+
+
+                decimal afterGSt = (afterWrap) * gst;
+                gstTextBox.Text = afterGSt.ToString("C");
             }
             catch (FormatException)
             {
