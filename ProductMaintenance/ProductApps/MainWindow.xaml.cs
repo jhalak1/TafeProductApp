@@ -22,6 +22,7 @@ namespace ProductApps
     {
         Product cProduct;
         const decimal deliveryCharge = 25m;
+        const decimal wrapCharge = 5m;
 
         public MainWindow()
         {
@@ -38,6 +39,9 @@ namespace ProductApps
 
                 decimal afterDelivery = cProduct.TotalPayment + deliveryCharge;
                 totalChargeTextBox.Text = afterDelivery.ToString("C");
+
+                decimal afterWrap = cProduct.TotalPayment + deliveryCharge + wrapCharge;
+                wrapTextBox.Text = afterWrap.ToString("C");
             }
             catch (FormatException)
             {
